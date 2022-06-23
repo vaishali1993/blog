@@ -1,0 +1,121 @@
+<html>
+<head>
+<style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css"></script>
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.swiper-container {
+  width: 600px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-slide:nth-child(1) {
+  background-image: url(https://picsum.photos/300/300/?image=1083)
+}
+
+.swiper-slide:nth-child(2) {
+  background-image: url(https://picsum.photos/300/300/?image=1050)
+}
+
+.swiper-slide:nth-child(3) {
+  background-image: url(https://picsum.photos/300/300/?image=1039)
+}
+
+.swiper-slide:nth-child(4) {
+  background-image: url(https://picsum.photos/300/300/?image=1019)
+}
+
+.swiper-slide:nth-child(5) {
+  background-image: url(https://picsum.photos/300/300/?image=1015)
+}
+
+.swiper-slide:nth-child(6) {
+  background-image: url(https://picsum.photos/300/300/?image=999)
+}
+
+.swiper-slide:nth-child(7) {
+  background-image: url(https://picsum.photos/300/300/?image=976)
+}
+
+.swiper-slide:nth-child(8) {
+  background-image: url(https://picsum.photos/300/300/?image=944)
+}
+
+.swiper-slide:nth-child(9) {
+  background-image: url(https://picsum.photos/300/300/?image=884)
+}
+
+.swiper-slide:nth-child(10) {
+  background-image: url(https://picsum.photos/300/300/?image=883)
+}
+</style>
+<script>
+var swiper = new Swiper('.swiper-container', {
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 'auto',
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true,
+  },
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+</script>
+</head>
+<body>
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"></div>
+    <div class="swiper-slide"></div>
+    <div class="swiper-slide"></div>
+    <div class="swiper-slide"></div>
+    <div class="swiper-slide"></div>
+    <div class="swiper-slide"></div>
+    <div class="swiper-slide"></div>
+    <div class="swiper-slide"></div>
+    <div class="swiper-slide"></div>
+    <div class="swiper-slide"></div>
+  </div>
+  <div class="swiper-pagination"></div>
+  
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
+</div>
+
+<svg width="1455" height="970" viewBox="0 0 1455 970" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect x="333.593" y="-495.092" width="2021.75" height="704.326" transform="rotate(56.3226 333.593 -495.092)" fill="#FFE8AC" fill-opacity="0.19"/> </svg>
+</body>
+
+</html>

@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Virtuaal Employee</title>
+  <meta content="" name="description">
+
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/logo.png" rel="icon">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+  
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+	<style>
+
+h1{
+  display: table;
+  margin: 5% auto 0;
+  text-transform: uppercase;
+  font-size: 4em;
+  font-weight: 400;
+  font-family: sans-serif;
+
+}
+.container1{
+  margin: 4% auto;
+  width: 210px;
+  height: 140px;
+  position: relative;
+  perspective: 1000px;
+}
+#carousel{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  animation: rotation 50s infinite linear;
+}
+#carousel:hover{
+  animation-play-state: paused;
+}
+#carousel figure{
+  display: block;
+  position: absolute;
+  width: 186px;
+  height: 218px;
+  left: 10px;
+  top: 10px;
+
+  overflow: hidden;
+ 
+}
+#carousel figure:nth-child(1){transform: rotateY(0deg) translateZ(288px);}
+#carousel figure:nth-child(2) { transform: rotateY(40deg) translateZ(288px);}
+#carousel figure:nth-child(3) { transform: rotateY(80deg) translateZ(288px);}
+#carousel figure:nth-child(4) { transform: rotateY(120deg) translateZ(288px);}
+#carousel figure:nth-child(5) { transform: rotateY(160deg) translateZ(288px);}
+#carousel figure:nth-child(6) { transform: rotateY(200deg) translateZ(288px);}
+#carousel figure:nth-child(7) { transform: rotateY(240deg) translateZ(288px);}
+#carousel figure:nth-child(8) { transform: rotateY(280deg) translateZ(288px);}
+#carousel figure:nth-child(9) { transform: rotateY(320deg) translateZ(288px);}
+
+img{
+  -webkit-filter: grayscale(0);
+  cursor: pointer;
+  transition: all .5s ease;
+  object-fit: cover;
+}
+/* img:hover{
+  -webkit-filter: grayscale(0);
+  transform: scale(1.2,1.2);
+} */
+
+@keyframes rotation{
+  from{
+    transform: rotateY(0deg);
+  }
+  to{
+    transform: rotateY(360deg);
+  }
+}
+body {font-family: sans-serif;}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border-right:1px solid orange;
+  width: 30%;
+  height: 410px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 8px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #4154f1;
+  color:#fff;
+  border-radius: 5px 0 0 5px;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 30px 12px;
+
+  width: 70%;
+  border-left: none;
+  height: 410px;
+  text-align: center;
+}
+.img-circle{
+width:100px;
+height:100px;
+border-radius:50%;
+}
+hr {
+    margin: 0rem 0 !important;
+}
+.head-border{
+          width: 390px;
+         height: 1px;
+        background: #020322;
+        margin-bottom:5px;
+}
+.head-border2{
+        
+         width: 390px;
+         height: 1px;
+         background: #020322;
+         margin-top:5px;
+}
+	</style>
+  
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="">
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active"></a></li>
+          <li><a class="nav-link scrollto" href=""><i class="bi bi-skype"></i></a></li>
+          <li><a class="nav-link scrollto" href=""><i class="fa fa-envelope"></i></a></li>
+          <li><a class="nav-link scrollto" href=""><i class="fa fa-phone"></i></a></li>
+         
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center">
+          <h1 data-aos="fade-up">Reduce Your Business Expenses Now</h1>
+          <div  class="mt-4"></div>
+          <span class="head-border" data-aos="fade-up" data-aos-delay="400"></span>
+          
+            <h2 data-aos="fade-up" data-aos-delay="400">Save up to 70% by going Remote</h2>
+          <span class="head-border2" data-aos="fade-up" data-aos-delay="400"></span>
+          <div  class="mt-4"></div>
+          <div data-aos="fade-up" data-aos-delay="600">
+            <div class="text-center text-lg-start">
+              <a href="#about" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+                <span>Hire Virtual Employee</span>
+              
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+          <div class="container1">
+            <div id="carousel">
+              <figure><img src="assets/img/slide/1.jpg" alt=""></figure>
+              <figure><img src="assets/img/slide/2.jpg" alt=""></figure>
+              <figure><img src="assets/img/slide/3.jpg" alt=""></figure>
+              <figure><img src="assets/img/slide/4.jpg" alt=""></figure>
+              <figure><img src="assets/img/slide/8.jpg" alt=""></figure>
+              <figure><img src="assets/img/slide/6.jpg" alt=""></figure>
+              <figure><img src="assets/img/slide/7.jpg" alt=""></figure>
+              <figure><img src="assets/img/slide/8.jpg" alt=""></figure>
+              <figure><img src="assets/img/slide/9.jpg" alt=""></figure>
+              <figure><img src="assets/img/slide/10.jpg" alt=""></figure>
+            
+            </div>
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      
+      <div class="container" data-aos="fade-up">
+        <div class="row gx-0">
+
+          <div class="col-lg-12 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="content">
+						    <div class="tab">
+							  <button class="tablinks" onclick="openCity(event, 'it')" id="defaultOpen"><img src="assets/img/icon/it.png" alt=""> IT Sourcing</button>
+							  <button class="tablinks" onclick="openCity(event, 'App')"><img src="assets/img/icon/app.png" alt="">Apps development</button>
+							  <button class="tablinks" onclick="openCity(event, 'digi')"><img src="assets/img/icon/digi.png" alt=""> Digital Marketing</button>
+							  <button class="tablinks" onclick="openCity(event, 'vir')"><img src="assets/img/icon/vir.png" alt=""> Virtual Assistance</button>
+							  <button class="tablinks" onclick="openCity(event, 'content')"><img src="assets/img/icon/content.png" alt="">Content Writing</button>
+							  <button class="tablinks" onclick="openCity(event, 'legal')"><img src="assets/img/icon/legal.png" alt="">Legal Process</button>
+							  <button class="tablinks" onclick="openCity(event, 'fin')"><img src="assets/img/icon/fin.png" alt="">Finanace & Account</button>
+							   <button class="tablinks" onclick="openCity(event, 'multi')"><img src="assets/img/icon/multi.png" alt="">Multimedia & Animation</button>
+							  <button class="tablinks" onclick="openCity(event, 'eng')"><img src="assets/img/icon/eng.png" alt="">Engineering  & Architector</button>
+							</div>
+
+							<div id="it" class="tabcontent">
+							  <h2>Services That Solve and Envolve</h2>
+							  <p>Get Robust Across150 Domains  </p>
+                <img src="assets/img/center.png" alt="" class="img-responsive" width="30%">
+                <p> Your Business + Our  Caliber = A Perfect Match.<br>
+                 Get Custom  IT solutions that mirror  your Business.</p>
+							</div>
+
+							<div id="App" class="tabcontent">
+							  <h2>Services That Solve and Envolve</h2>
+							  <p>Get Robust Across150 Domains  </p>
+                <img src="assets/img/app.png" alt="" class="img-responsive" width="30%">
+                <p> App Development- Fast intution application  are now  just  a click  away.<br>
+                 Develop Customn App compatiable  with all Operating system, including  IOS, Android, and windows.</p>
+							</div>
+
+							<div id="digi" class="tabcontent">
+                <h2>Services That Solve and Envolve</h2>
+							  <p>Get Robust Across150 Domains  </p>
+                <img src="assets/img/digi.png" alt="" class="img-responsive" width="30%">
+                <p> Digital Marketing- Fast intution application  are now  just  a click  away.<br>
+                 Develop Customn App compatiable  with all Operating system, including  IOS, Android, and windows.</>
+							</div>
+
+              <div id="vir" class="tabcontent">
+							  <h2>Services That Solve and Envolve</h2>
+							  <p>Get Robust Across150 Domains  </p>
+                <img src="assets/img/content.png" alt="" class="img-responsive" width="30%">
+                <p> Your Business + Our  Caliber = A Perfect Match.<br>
+                 Get Custom  IT solutions that mirror  your Business.</p>
+							</div>
+
+							<div id="content" class="tabcontent">
+							  <h2>Services That Solve and Envolve</h2>
+							  <p>Get Robust Across150 Domains  </p>
+                <img src="assets/img/app.png" alt="" class="img-responsive" width="30%">
+                <p> App Development- Fast intution application  are now  just  a click  away.<br>
+                 Develop Customn App compatiable  with all Operating system, including  IOS, Android, and windows.</p>
+							</div>
+
+							<div id="legal" class="tabcontent">
+                <h2>Services That Solve and Envolve</h2>
+							  <p>Get Robust Across150 Domains  </p>
+                <img src="assets/img/app.png" alt="" class="img-responsive" width="30%">
+                <p> Digital Marketing- Fast intution application  are now  just  a click  away.<br>
+                 Develop Customn App compatiable  with all Operating system, including  IOS, Android, and windows.</>
+							</div>
+              <div id="fin" class="tabcontent">
+                <h2>Services That Solve and Envolve</h2>
+							  <p>Get Robust Across150 Domains  </p>
+                <img src="assets/img/app.png" alt="" class="img-responsive" width="30%">
+                <p> Digital Marketing- Fast intution application  are now  just  a click  away.<br>
+                 Develop Customn App compatiable  with all Operating system, including  IOS, Android, and windows.</>
+							</div>
+              <div id="multi" class="tabcontent">
+                <h2>Services That Solve and Envolve</h2>
+							  <p>Get Robust Across150 Domains  </p>
+                <img src="assets/img/app.png" alt="" class="img-responsive" width="30%">
+                <p> Digital Marketing- Fast intution application  are now  just  a click  away.<br>
+                 Develop Customn App compatiable  with all Operating system, including  IOS, Android, and windows.</>
+							</div>
+              <div id="eng" class="tabcontent">
+                <h2>Services That Solve and Envolve</h2>
+							  <p>Get Robust Across150 Domains  </p>
+                <img src="assets/img/app.png" alt="" class="img-responsive" width="30%">
+                <p> Engineering and Architector- Fast intution application  are now  just  a click  away.<br>
+                 Develop Customn App compatiable  with all Operating system, including  IOS, Android, and windows.</>
+							</div>
+
+
+
+
+
+            </div>
+          </div>
+
+         
+
+        </div>
+      </div>
+
+    </section><!-- End About Section -->
+
+    <!-- ======= Values Section ======= -->
+    <section id="values" class="values">
+          <div class="container" data-aos="fade-up">
+              <div class="row">
+                  <div class="col-lg-12 row">
+                        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                          <div class="parent">
+                            <div>
+                              <h3 class="heading-work">Working Remote Was Never This Easy</h3>
+                              <p class="sub-heading">24/7 Support to power you through <br>crazy Market Times.</p>
+                              <div class="row mt-30">
+                                <div class="col-lg-1"></div>
+                                  <div class="col-lg-2"><img src="assets/img/profile-img.png" class="img-circle"  alt=""></div>
+                                  <div class="col-lg-9 text-left  p-20">
+                                    <span>Pragya Jogi (7+ years of experience)</span><br>
+                                    <b>Sr. Data Expert </b>
+                                    
+                                    <h3 class="mt-2"><input type="button" value="Hire Pragya" class="btn btn-blue1"></h3>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
+                        <img src="assets/img/videocall.png" class="img-fluid br-5" alt="" width="100%" >
+                        </div>
+                  </div>
+              </div>
+          </div>
+    </section>
+    <!-- End Values Section -->
+ <!-- ======= F.A.Q Section ======= -->
+ <section id="counts" class="counts">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6 col-md-6">
+              <div class="col-lg-12 text-center"><img src="assets/img/arrow-up.png"></div>
+              <div class="count-box">
+                <div class="card1">
+                <img src="assets/img/nilajana.png">
+                </div>
+                <div class="m-20">
+                  <h4 class="heading4">Nilajana Das</h4>
+                  <h5> Sr. Software Developer</h5>
+                  <p> <a href=""> C# | ASP.NET | JQuery & Angular 2 | SQL Server &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</a></p>
+                  <div class="float-right"><input type="button" value="Hire Nilajana" class="btn btn-blue"></div> 
+                </div>
+              </div>
+
+              <div class="count-box">
+                <div class="card1">
+                <img src="assets/img/priyank.png">
+                </div>
+                <div class="m-20">
+                
+                  <h4 class="heading4">Priyank Mittal</h4>
+                  <h5> data Entry Expert</h5>
+
+                  <p>
+                    <a href=""> Database Building |Database Conversion | Data Extraction | Data Cleaning</a>
+                  </p>
+                  <div class="float-right"><input type="button" value="Hire Priyank" class="btn btn-blue"></div> 
+                </div>
+              </div>
+              <div class="col-lg-12 text-center"><img src="assets/img/arrow.png"></div>
+          </div>
+
+          <div class="col-lg-6 col-md-6">
+            <div class="parent">
+              <div class="child">
+                  <h2 class="speed"><b> Speed. Efficiency. Commitment</b></h2>
+                  <h5>  Get This and More  from Our 1500+ Resources</h5> 
+              </div>
+            </div>
+          </div>
+      
+        </div>
+    </div>
+</div>
+</section><!-- End Counts Section -->
+
+   
+    <!-- ======= Features Section ======= -->
+  
+
+    
+   
+    
+   
+    
+   
+    <!-- ======= Contact Section ======= -->
+    <section  id="features" class="features">
+
+      <div class="container" data-aos="fade-up">
+        <div class="row gy-4">
+
+          <div class="col-lg-6">
+
+            <div class="row gy-4">
+                <header>
+                  <h3 class="heading-work"> Scale the way you want</h3>
+                  <p class="sub-heading">Deals Made Specially for You</p>
+                </header>
+
+              <div class="col-lg--offset-2 col-md-10">
+                <div class="col-md-12" data-aos="zoom-out" data-aos-delay="200">
+                  <div class="feature-box  align-items-center">
+                    <div class="row">
+                        <div class="col-lg-10">
+                          <h4 class="heading4">Free First Week Trail</h4>
+                          <span>40 hours no credit card required </span>
+                        </div>
+                        <div class="col-lg-2">
+                          <h2> <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" checked></h2>
+                        </div>
+                    </div>
+                  </div>
+                </div> 
+
+                <div class="col-md-12" data-aos="zoom-out" data-aos-delay="200">
+                  <div class="feature-box  align-items-center">
+                    <div class="row">
+                        <div class="col-lg-10">
+                          <h4 class="heading4">Ad Hoc</h4>
+                          <span>60 hours per Month</span>
+                        </div>
+                        <div class="col-lg-2">
+                          <h2> <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" ></h2>
+                        </div>
+                    </div>
+                  </div>
+                </div> 
+                <div class="col-md-12" data-aos="zoom-out" data-aos-delay="200">
+                  <div class="feature-box  align-items-center">
+                    <div class="row">
+                        <div class="col-lg-10">
+                          <h4 class="heading4">Part-time</h4>
+                          <span>4 hours  per day , 5 days a week </span>
+                        </div>
+                        <div class="col-lg-2">
+                          <h2> <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled"  ></h2>
+                        </div>
+                    </div>
+                  </div>
+                </div> 
+                <div class="col-md-12" data-aos="zoom-out" data-aos-delay="200">
+                  <div class="feature-box  align-items-center">
+                    <div class="row">
+                        <div class="col-lg-10">
+                          <h4 class="heading4">Full Time</h4>
+                          <span>8 hours  per day , 5 days a week  </span>
+                        </div>
+                        <div class="col-lg-2">
+                          <h2> <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" ></h2>
+                        </div>
+                    </div>
+                  </div>
+                </div> 
+
+                
+                  
+                
+              </div>
+             
+            </div>
+
+          </div>
+
+          <div class="col-lg-6"> 
+            <form class="form-bg">
+              <div class="row gy-4">
+                <h4 class="text-center text-black"><b>Share your Requirement</b></h4>
+                <div class="col-md-6">
+                  <label>Name *</label>
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                </div>
+
+                <div class="col-md-6 ">
+                  <label> Email Address*</label>
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label>Phone Number *</label>
+                  <input type="text" class="form-control" name="subject" placeholder="Phone No" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label>Project Duration *</label>
+                  <input type="text" class="form-control" name="subject" placeholder="Project Duration" required>
+                 
+                </div>
+                <div class="col-lg-12">
+                  <label>Wesite/ Company</label>
+                  <textarea class="form-control" name="message" rows="6" placeholder="Website/Company" required></textarea>
+                </div>
+                <div class="col-lg-12">
+                  <label>Work Requirment*</label>
+                  <textarea class="form-control" name="message" rows="6" placeholder="Work Requirement" required></textarea>
+                </div>
+                <div class="col-md-12 text-center">
+                 
+
+                  <input type="submit" class="start-button" value="Start 1-week Free Trail">
+                </div>
+
+              </div>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- End Contact Section -->
+
+    <!-- FAst Easy and affordable -->
+
+    <section id="services" class="services">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <p>Fast. Easy. Affordable</p>
+          <h4>Only VE's OutSourcing  Model Keeps You at the Center</h4>
+        </header>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-box blue">
+              <img src="assets/img/resource.png">
+              <h3>1500+ Inhouse<br> Resources</h3>
+           Never get dead lock due to skill storages. Quick onboarding within 8 hours
+            
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-box orange">
+              <img src="assets/img/overheads.png">
+              <h3>Zero Over Heads</h3>
+              <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut nesciunt dolorem.</p>
+             
+            </div>
+          </div>
+
+         
+
+         
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
+            <div class="service-box green">
+              <img src="assets/img/worries.png">
+              <h3>Work without worries</h3>
+              <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.</p>
+          
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- End Services Section -->
+    <!-- testimonial -->
+
+    <section id="testimonials" class="testimonials">
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                  
+                   
+                    <div class="profile mt-auto">
+                      <img src="assets/img/testimonials/t1.png" class="testimonial-img" alt="">
+                      <p>
+                        Hii Join the Air4casts team in 2011 and he is still with us,  11 years later
+                      </p>
+                      <h3>Emma Robinson</h3>
+                      <h4>Director, Air4casts Ltd. Uk</h4>
+                     
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    
+                  
+                    <div class="profile mt-auto">
+                      <img src="assets/img/testimonials/t2.png" class="testimonial-img" alt="">
+                      <p>
+                        Hii Join the Air4casts team in 2011 and he is still with us,  11 years later
+                      </p>
+                      <h3>Larry Goodman</h3>
+                      <h4>Ceo &amp; Founder</h4>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                   
+                   
+                    <div class="profile mt-auto">
+                      <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                      <p>
+                        Hii Join the Air4casts team in 2011 and he is still with us,  11 years later
+                      </p>
+                      <h3>Saul Goodman</h3>
+                      <h4>Ceo &amp; Founder</h4>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="portfolio-info">
+              <h3>3000+ client</h3>
+            
+            </div>
+            <div class="portfolio-description">
+              <h2>This is an example of portfolio detail</h2>
+              <p>
+                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+
+
+    <!-- close testimonial -->
+
+
+
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-12 text-center">
+            <h4>Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+          </div>
+          <div class="col-lg-6">
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-5 col-md-12 footer-info">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <img src="assets/img/logo.png" alt="">
+              <span>FlexStart</span>
+            </a>
+            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+            <h4>Contact Us</h4>
+            <p>
+              A108 Adam Street <br>
+              New York, NY 535022<br>
+              United States <br><br>
+              <strong>Phone:</strong> +1 5589 55488 55<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>FlexStart</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexstart-bootstrap-startup-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+	    <script>
+		function openCity(evt, cityName) {
+		  var i, tabcontent, tablinks;
+		  tabcontent = document.getElementsByClassName("tabcontent");
+		  for (i = 0; i < tabcontent.length; i++) {
+			tabcontent[i].style.display = "none";
+		  }
+		  tablinks = document.getElementsByClassName("tablinks");
+		  for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].className = tablinks[i].className.replace(" active", "");
+		  }
+		  document.getElementById(cityName).style.display = "block";
+		  evt.currentTarget.className += " active";
+		}
+
+		// Get the element with id="defaultOpen" and click on it
+		document.getElementById("defaultOpen").click();
+		</script>
+		   
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
